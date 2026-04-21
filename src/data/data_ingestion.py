@@ -75,10 +75,7 @@ def main():
         # test_size = 0.2
         
         df = load_data(data_url='https://raw.githubusercontent.com/vikashishere/Datasets/refs/heads/main/data.csv')
-        # s3 = s3_connection.s3_operations("s3-demo-mlops", "AKIAQ5X6NV4XWR3H5JVQ", "ziiAmEqlGszCpF3n9wBb+1Qn8+TystPcXs/ytXJI")
-        # df = s3.fetch_file_from_s3("data.csv")
-
-
+       
 
         final_df = preprocess_data(df)
         train_data, test_data = train_test_split(final_df, test_size=test_size, random_state=42)
